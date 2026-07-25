@@ -30,18 +30,22 @@ function addData() {
   let employee = {id:4,name:"susan",age:"20",profession:"intern"};
   arr.push(employee);
 
-  console.log(employee);
+  console.log(arr);
 }
 
 //addData(arr);
 
 function removeAdmin() {
-  for(let i =0;i<arr.length;i++){
+ /* for(let i =0;i<arr.length;i++){
     if(arr[i].profession === "admin"){
       arr.pop();
     }
-  }
-  console.log(arr);
+  }*/
+arr =  arr.filter((value)=>{
+  return value.profession!== "admin";
+ });
+
+ console.log(arr);
 }
 
 //removeAdmin(arr);
